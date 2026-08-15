@@ -1,82 +1,322 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Lumivo Galaxy — kompaktowy projektor LED do tworzenia wyjątkowej atmosfery w domu.">
-<title>Lumivo Galaxy — Projektor LED</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#070711;--card:#111122;--text:#f7f7ff;--muted:#a9a9c4;--accent:#7c4dff;--accent2:#a56bff}
-html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 15% 10%,rgba(124,77,255,.22),transparent 30%),radial-gradient(circle at 85% 20%,rgba(0,210,255,.12),transparent 28%),var(--bg);color:var(--text);line-height:1.6}
-a{color:inherit}
-nav,.hero,.features{width:min(1120px,calc(100% - 32px));margin-left:auto;margin-right:auto}
-nav{padding:24px 0;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:24px;font-weight:800}.logo span{color:var(--accent2)}
-.nav-link{color:var(--muted);text-decoration:none;font-size:14px}
-.hero{margin-top:50px;margin-bottom:90px;display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
-.eyebrow{display:inline-block;padding:7px 12px;border:1px solid rgba(165,107,255,.35);background:rgba(124,77,255,.1);color:#c9b2ff;border-radius:999px;font-size:13px;font-weight:700;margin-bottom:20px}
-h1{font-size:clamp(42px,6vw,76px);line-height:.98;letter-spacing:-3px;margin-bottom:24px}
-h1 span{background:linear-gradient(90deg,#fff,#b98cff);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{color:var(--muted);font-size:18px;max-width:590px;margin-bottom:30px}
-.price{display:flex;align-items:baseline;gap:10px;margin-bottom:22px}.price strong{font-size:38px}.price small{color:var(--muted)}
-.buy{display:inline-flex;align-items:center;justify-content:center;min-width:210px;padding:15px 24px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;text-decoration:none;font-weight:800;box-shadow:0 12px 35px rgba(124,77,255,.28);transition:.2s}
-.buy:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(124,77,255,.4)}
-.secure{color:#8585a2;font-size:12px;margin-top:12px}
-.product-art{min-height:480px;border:1px solid rgba(255,255,255,.1);border-radius:28px;background:radial-gradient(circle at 50% 40%,rgba(157,103,255,.38),transparent 28%),radial-gradient(circle at 50% 55%,rgba(0,210,255,.16),transparent 42%),linear-gradient(145deg,#14142a,#090914);display:grid;place-items:center;overflow:hidden;position:relative}
-.stars{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.8) 1px,transparent 1.5px),radial-gradient(circle,rgba(170,130,255,.7) 1px,transparent 1.5px);background-size:90px 90px,140px 140px;opacity:.25}
-.projector{width:260px;height:175px;border-radius:38px;background:linear-gradient(145deg,#2c2c42,#10101b);border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 70px rgba(0,0,0,.65),0 0 80px rgba(124,77,255,.35);position:relative;transform:rotate(-5deg)}
-.lens{width:88px;height:88px;border-radius:50%;position:absolute;left:28px;top:43px;background:radial-gradient(circle at 35% 35%,#d9c9ff 0 4%,#744cff 20%,#20164d 48%,#08080e 72%);border:5px solid #3e3e56;box-shadow:0 0 35px rgba(125,77,255,.8)}
-.status-light{width:10px;height:10px;border-radius:50%;background:#8c6aff;position:absolute;right:32px;top:25px;box-shadow:0 0 14px #8c6aff}
-.features{margin-bottom:90px}.section-title{text-align:center;font-size:34px;letter-spacing:-1px;margin-bottom:28px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.feature{background:rgba(17,17,34,.75);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:25px}
-.icon{font-size:26px;margin-bottom:13px}.feature h3{margin-bottom:8px;font-size:18px}.feature p{color:var(--muted);font-size:14px}
-.offer{width:min(760px,calc(100% - 32px));margin:0 auto 90px;padding:38px;text-align:center;border-radius:24px;background:linear-gradient(145deg,rgba(124,77,255,.15),rgba(17,17,34,.9));border:1px solid rgba(165,107,255,.25)}
-.offer h2{font-size:32px;margin-bottom:10px}.offer p{color:var(--muted);margin-bottom:24px}
-footer{border-top:1px solid rgba(255,255,255,.1);color:#777791;text-align:center;padding:28px 16px;font-size:13px}
-@media(max-width:800px){.hero{grid-template-columns:1fr;gap:40px;margin-top:30px}.product-art{min-height:350px}.grid{grid-template-columns:1fr}h1{letter-spacing:-2px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lumivo Galaxy — projektor LED</title>
+  <meta name="description" content="Lumivo Galaxy — kompaktowy projektor LED do stworzenia wyjątkowej atmosfery w domu.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #070712;
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      width: 100%;
+      padding: 24px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: #8b5cf6;
+    }
+
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 70px 7%;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(124,58,237,.28), transparent 35%),
+        radial-gradient(circle at 80% 70%, rgba(236,72,153,.18), transparent 35%);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 50px;
+      background: rgba(139,92,246,.15);
+      border: 1px solid rgba(139,92,246,.35);
+      color: #c4b5fd;
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1;
+      letter-spacing: -3px;
+      margin-bottom: 24px;
+    }
+
+    h1 span {
+      background: linear-gradient(90deg, #a78bfa, #f0abfc);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .description {
+      color: #b7b7c9;
+      font-size: 18px;
+      line-height: 1.7;
+      max-width: 540px;
+      margin-bottom: 32px;
+    }
+
+    .price {
+      font-size: 38px;
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+
+    .price small {
+      font-size: 15px;
+      color: #9999aa;
+      font-weight: normal;
+    }
+
+    .buy-button {
+      display: inline-block;
+      padding: 17px 34px;
+      border-radius: 12px;
+      background: linear-gradient(90deg, #7c3aed, #a855f7);
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 700;
+      box-shadow: 0 12px 35px rgba(124,58,237,.35);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .buy-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(124,58,237,.5);
+    }
+
+    .secure {
+      margin-top: 16px;
+      color: #858597;
+      font-size: 13px;
+    }
+
+    .product-card {
+      min-height: 480px;
+      border-radius: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 45%, #8b5cf6 0%, #4c1d95 20%, #17112d 48%, #0b0b16 75%);
+      border: 1px solid rgba(255,255,255,.1);
+      box-shadow: 0 30px 100px rgba(0,0,0,.45);
+    }
+
+    .projector {
+      width: 210px;
+      height: 130px;
+      border-radius: 25px;
+      background: linear-gradient(145deg, #292936, #090910);
+      border: 1px solid #555565;
+      box-shadow: 0 30px 60px rgba(0,0,0,.5);
+      transform: rotate(-8deg);
+      position: relative;
+    }
+
+    .projector:before {
+      content: "";
+      position: absolute;
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #fff 0%, #c4b5fd 8%, #8b5cf6 25%, #312e81 55%, #111 75%);
+      left: 62px;
+      top: 23px;
+      box-shadow: 0 0 35px #8b5cf6;
+    }
+
+    .projector:after {
+      content: "LUMIVO";
+      position: absolute;
+      bottom: 12px;
+      left: 78px;
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: #aaa;
+    }
+
+    .features {
+      max-width: 1100px;
+      margin: -40px auto 80px;
+      padding: 0 7%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .feature {
+      padding: 25px;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 18px;
+      background: rgba(255,255,255,.025);
+    }
+
+    .feature h3 {
+      margin-bottom: 8px;
+      font-size: 17px;
+    }
+
+    .feature p {
+      color: #9292a4;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #686879;
+      border-top: 1px solid rgba(255,255,255,.07);
+      font-size: 13px;
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .product-card {
+        min-height: 350px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+        margin-top: 30px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<nav>
-  <div class="logo">Lumivo<span>.</span></div>
-  <a class="nav-link" href="#features">Dlaczego Lumivo?</a>
-</nav>
 
-<main>
-<section class="hero">
-<div>
-  <div class="eyebrow">LUMIVO GALAXY • NOWOŚĆ</div>
-  <h1>Stwórz swój własny <span>galaktyczny klimat.</span></h1>
-  <p class="lead">Kompaktowy projektor LED do tworzenia efektownej atmosfery w domu. Idealny do sypialni, relaksu, filmów i wyjątkowego oświetlenia wnętrza.</p>
-  <div class="price"><strong>129,99 zł</strong><small>jednorazowo</small></div>
-  <a class="buy" href="https://buy.stripe.com/14AcMYdVqbf5a0zbOGfUQ00" target="_blank" rel="noopener">Kup teraz</a>
-  <div class="secure">🔒 Bezpieczna płatność obsługiwana przez Stripe</div>
-</div>
-<div class="product-art" aria-label="Wizualizacja projektora Lumivo Galaxy">
-  <div class="stars"></div>
-  <div class="projector"><div class="lens"></div><div class="status-light"></div></div>
-</div>
-</section>
+  <header>
+    <div class="logo">Lumi<span>vo</span></div>
+    <div style="color:#8f8fa2;font-size:14px;">Lumivo Galaxy</div>
+  </header>
 
-<section class="features" id="features">
-<h2 class="section-title">Dlaczego Lumivo Galaxy?</h2>
-<div class="grid">
-<article class="feature"><div class="icon">🌌</div><h3>Efektowna atmosfera</h3><p>Twórz wyjątkowy klimat i rozświetl swoje wnętrze efektami inspirowanymi galaktyką.</p></article>
-<article class="feature"><div class="icon">🏠</div><h3>Kompaktowy rozmiar</h3><p>Niewielka konstrukcja sprawia, że projektor łatwo ustawić w sypialni, salonie lub pokoju.</p></article>
-<article class="feature"><div class="icon">✨</div><h3>Wiele zastosowań</h3><p>Relaks, wieczorny seans, dekoracja pokoju albo wyjątkowa atmosfera podczas spotkania.</p></article>
-</div>
-</section>
+  <main>
 
-<section class="offer">
-<h2>Gotowy na własną galaktykę?</h2>
-<p>Zamów Lumivo Galaxy za 129,99 zł i przejdź do bezpiecznej strony płatności.</p>
-<a class="buy" href="https://buy.stripe.com/14AcMYdVqbf5a0zbOGfUQ00" target="_blank" rel="noopener">Kup Lumivo Galaxy — 129,99 zł</a>
-</section>
-</main>
+    <section class="hero">
+      <div class="container">
 
-<footer>© 2026 Lumivo. Wszystkie prawa zastrzeżone.</footer>
+        <div>
+          <div class="tag">✨ Stwórz wyjątkową atmosferę</div>
+
+          <h1>
+            Poznaj<br>
+            <span>Lumivo Galaxy</span>
+          </h1>
+
+          <p class="description">
+            Kompaktowy projektor LED do tworzenia efektownej
+            przestrzeni w Twoim domu. Idealny do sypialni,
+            relaksu, filmów i wyjątkowego klimatu.
+          </p>
+
+          <div class="price">
+            129,99 zł
+            <small>brutto</small>
+          </div>
+
+          <!-- STRIPE -->
+          <a
+            class="buy-button"
+            href="https://buy.stripe.com/14AcMYdVqbf5a0zbOGfUQ00"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Kup teraz →
+          </a>
+
+          <div class="secure">
+            🔒 Bezpieczna płatność obsługiwana przez Stripe
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="projector"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="features">
+
+      <div class="feature">
+        <h3>🌌 Efektowne światło</h3>
+        <p>
+          Stwórz wyjątkową atmosferę i zmień wygląd swojego pomieszczenia.
+        </p>
+      </div>
+
+      <div class="feature">
+        <h3>🏠 Do domu</h3>
+        <p>
+          Kompaktowa konstrukcja sprawia, że urządzenie łatwo dopasować
+          do różnych przestrzeni.
+        </p>
+      </div>
+
+      <div class="feature">
+        <h3>💳 Bezpieczne płatności</h3>
+        <p>
+          Płatność realizowana jest przez Stripe, z obsługą dostępnych
+          metod płatności.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Lumivo. Wszystkie prawa zastrzeżone.
+  </footer>
+
 </body>
 </html>
