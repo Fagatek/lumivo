@@ -28,5 +28,56 @@ const cards=document.querySelectorAll('.card'),nameEl=document.getElementById('s
 cards.forEach(card=>card.addEventListener('click',()=>{cards.forEach(c=>c.classList.remove('selected'));card.classList.add('selected');nameEl.textContent=card.dataset.name;priceEl.textContent=card.dataset.price;link=card.dataset.link;buy.textContent=link?'Przejdź do płatności →':'Ten wariant nie ma jeszcze płatności';}));
 buy.addEventListener('click',()=>{if(link)location.href=link;else alert('Ten wariant potrzebuje osobnego Payment Link w Stripe. Po jego utworzeniu wpisz go w data-link tego wariantu w index.html.');});
 </script>
+
+<section id="dokumenty" style="padding:40px 20px;line-height:1.6">
+<h2>Dokumenty sklepu</h2>
+
+<h3 id="regulamin">Regulamin sklepu</h3>
+<p>
+Sprzedawcą sklepu Lumivo jest Oskar Niemyjski, Leśna 57/9, 19-100 Mońki, Polska.
+Kontakt: oskarnie1410@gmail.com, tel. 511 673 008.
+</p>
+<p>
+Sklep prowadzi sprzedaż produktów prezentowanych na stronie. Złożenie zamówienia
+oznacza zawarcie umowy sprzedaży po dokonaniu płatności.
+</p>
+
+<h3 id="zwroty">Zwroty i odstąpienie od umowy</h3>
+<p>
+Konsument ma prawo odstąpić od umowy zawartej na odległość na zasadach określonych
+w obowiązujących przepisach prawa. W sprawie zwrotu należy skontaktować się mailowo:
+oskarnie1410@gmail.com.
+</p>
+
+<h3 id="reklamacje">Reklamacje</h3>
+<p>
+Reklamację można zgłosić poprzez e-mail. W zgłoszeniu należy opisać problem oraz
+podać dane zamówienia.
+</p>
+
+<h3 id="dostawa">Dostawa i płatności</h3>
+<p>
+Płatności obsługiwane są przez Stripe. Realizacja zamówienia rozpoczyna się po
+zaksięgowaniu płatności.
+</p>
+
+<h3 id="prywatnosc">Polityka prywatności</h3>
+<p>
+Dane klientów są wykorzystywane wyłącznie w celu realizacji zamówień, obsługi płatności,
+dostawy, zwrotów i reklamacji.
+</p>
+
+<h3>Kontakt</h3>
+<p>
+Lumivo<br>
+Oskar Niemyjski<br>
+Leśna 57/9<br>
+19-100 Mońki<br>
+Polska<br>
+Email: oskarnie1410@gmail.com<br>
+Telefon: 511 673 008
+</p>
+</section>
+
 </body>
 </html>
