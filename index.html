@@ -3,84 +3,80 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Galaxy Projector — Zamień pokój w galaktykę</title>
-<meta name="description" content="Mini projektor Galaxy 2w1. Stwórz wyjątkową atmosferę w kilka sekund.">
+<meta name="description" content="Lumivo Galaxy — kompaktowy projektor LED do tworzenia wyjątkowej atmosfery w domu.">
+<title>Lumivo Galaxy — Projektor LED</title>
 <style>
-:root{--bg:#070812;--card:#101326;--text:#f7f7fb;--muted:#b9bdd2;--accent:#9b7cff;--accent2:#55d8ff;--line:#242844}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 50% -10%,#25205a 0,#0b0c1b 35%,var(--bg) 70%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.5}
-.container{width:min(1120px,92%);margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}.logo{font-weight:900;letter-spacing:.5px}.badge{border:1px solid var(--line);padding:7px 12px;border-radius:99px;color:#d9dcf0;font-size:13px}
-.hero{padding:48px 0 80px;display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}.eyebrow{color:var(--accent2);font-weight:800;text-transform:uppercase;font-size:13px;letter-spacing:1.5px}.hero h1{font-size:clamp(42px,6vw,76px);line-height:.98;margin:15px 0 22px;letter-spacing:-3px}.hero p{font-size:19px;color:var(--muted);max-width:610px}.price{display:flex;align-items:end;gap:12px;margin:28px 0}.price strong{font-size:42px}.old{text-decoration:line-through;color:#777d98;font-size:19px}.cta{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;background:linear-gradient(135deg,var(--accent),#6e5cff);color:#fff;font-weight:900;padding:17px 27px;border-radius:14px;box-shadow:0 12px 35px #6e5cff35;transition:.2s}.cta:hover{transform:translateY(-2px)}.note{font-size:13px;color:#8e93ad;margin-top:12px}
-.product{min-height:500px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,#171a35,#0b0d19);display:grid;place-items:center;position:relative;overflow:hidden}.stars{position:absolute;inset:0;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:28px 28px;opacity:.2}.orb{width:230px;height:230px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#74dcff 8%,#846bff 35%,#2a1e78 60%,transparent 70%);filter:blur(.2px);box-shadow:0 0 80px #7767ff,0 0 180px #48dfff55}.device{position:absolute;bottom:95px;width:180px;height:75px;border-radius:30px 30px 45px 45px;background:linear-gradient(#30354f,#0b0d17);border:2px solid #454a68;box-shadow:0 25px 45px #000}.device:before{content:"";position:absolute;left:50%;top:-18px;transform:translateX(-50%);width:82px;height:40px;border-radius:50%;background:#15192a;border:2px solid #4c5273}
-section{padding:80px 0}.center{text-align:center}.center h2{font-size:40px;margin:8px 0 12px}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}.card{background:rgba(16,19,38,.8);border:1px solid var(--line);padding:28px;border-radius:20px}.icon{font-size:30px}.card h3{margin:12px 0 7px}.offer{background:linear-gradient(135deg,#151633,#0d1020);border:1px solid var(--line);border-radius:26px;padding:42px;display:flex;justify-content:space-between;gap:30px;align-items:center}.offer h2{font-size:38px;margin:0}.faq{max-width:820px;margin:30px auto}.faq details{border-bottom:1px solid var(--line);padding:20px 0}.faq summary{cursor:pointer;font-weight:800}.formwrap{max-width:720px;margin:35px auto;background:#101326;border:1px solid var(--line);border-radius:24px;padding:30px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}label{font-weight:700;font-size:14px}input,select{width:100%;background:#090b16;color:#fff;border:1px solid #303550;border-radius:11px;padding:14px;font:inherit}button{border:0;cursor:pointer;width:100%;font:inherit}.success{display:none;margin-top:18px;padding:14px;border-radius:12px;background:#18351f;color:#b9f3c5}.footer{padding:35px 0;color:#777d98;font-size:13px;border-top:1px solid var(--line)}
-@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:25px}.product{min-height:380px}.grid{grid-template-columns:1fr}.offer{flex-direction:column;align-items:flex-start}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.hero h1{letter-spacing:-2px}}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#070711;--card:#111122;--text:#f7f7ff;--muted:#a9a9c4;--accent:#7c4dff;--accent2:#a56bff}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 15% 10%,rgba(124,77,255,.22),transparent 30%),radial-gradient(circle at 85% 20%,rgba(0,210,255,.12),transparent 28%),var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit}
+nav,.hero,.features{width:min(1120px,calc(100% - 32px));margin-left:auto;margin-right:auto}
+nav{padding:24px 0;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:24px;font-weight:800}.logo span{color:var(--accent2)}
+.nav-link{color:var(--muted);text-decoration:none;font-size:14px}
+.hero{margin-top:50px;margin-bottom:90px;display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+.eyebrow{display:inline-block;padding:7px 12px;border:1px solid rgba(165,107,255,.35);background:rgba(124,77,255,.1);color:#c9b2ff;border-radius:999px;font-size:13px;font-weight:700;margin-bottom:20px}
+h1{font-size:clamp(42px,6vw,76px);line-height:.98;letter-spacing:-3px;margin-bottom:24px}
+h1 span{background:linear-gradient(90deg,#fff,#b98cff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:18px;max-width:590px;margin-bottom:30px}
+.price{display:flex;align-items:baseline;gap:10px;margin-bottom:22px}.price strong{font-size:38px}.price small{color:var(--muted)}
+.buy{display:inline-flex;align-items:center;justify-content:center;min-width:210px;padding:15px 24px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;text-decoration:none;font-weight:800;box-shadow:0 12px 35px rgba(124,77,255,.28);transition:.2s}
+.buy:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(124,77,255,.4)}
+.secure{color:#8585a2;font-size:12px;margin-top:12px}
+.product-art{min-height:480px;border:1px solid rgba(255,255,255,.1);border-radius:28px;background:radial-gradient(circle at 50% 40%,rgba(157,103,255,.38),transparent 28%),radial-gradient(circle at 50% 55%,rgba(0,210,255,.16),transparent 42%),linear-gradient(145deg,#14142a,#090914);display:grid;place-items:center;overflow:hidden;position:relative}
+.stars{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.8) 1px,transparent 1.5px),radial-gradient(circle,rgba(170,130,255,.7) 1px,transparent 1.5px);background-size:90px 90px,140px 140px;opacity:.25}
+.projector{width:260px;height:175px;border-radius:38px;background:linear-gradient(145deg,#2c2c42,#10101b);border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 70px rgba(0,0,0,.65),0 0 80px rgba(124,77,255,.35);position:relative;transform:rotate(-5deg)}
+.lens{width:88px;height:88px;border-radius:50%;position:absolute;left:28px;top:43px;background:radial-gradient(circle at 35% 35%,#d9c9ff 0 4%,#744cff 20%,#20164d 48%,#08080e 72%);border:5px solid #3e3e56;box-shadow:0 0 35px rgba(125,77,255,.8)}
+.status-light{width:10px;height:10px;border-radius:50%;background:#8c6aff;position:absolute;right:32px;top:25px;box-shadow:0 0 14px #8c6aff}
+.features{margin-bottom:90px}.section-title{text-align:center;font-size:34px;letter-spacing:-1px;margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feature{background:rgba(17,17,34,.75);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:25px}
+.icon{font-size:26px;margin-bottom:13px}.feature h3{margin-bottom:8px;font-size:18px}.feature p{color:var(--muted);font-size:14px}
+.offer{width:min(760px,calc(100% - 32px));margin:0 auto 90px;padding:38px;text-align:center;border-radius:24px;background:linear-gradient(145deg,rgba(124,77,255,.15),rgba(17,17,34,.9));border:1px solid rgba(165,107,255,.25)}
+.offer h2{font-size:32px;margin-bottom:10px}.offer p{color:var(--muted);margin-bottom:24px}
+footer{border-top:1px solid rgba(255,255,255,.1);color:#777791;text-align:center;padding:28px 16px;font-size:13px}
+@media(max-width:800px){.hero{grid-template-columns:1fr;gap:40px;margin-top:30px}.product-art{min-height:350px}.grid{grid-template-columns:1fr}h1{letter-spacing:-2px}}
 </style>
 </head>
 <body>
-<header class="container nav"><div class="logo">✦ GALAXY HOME</div><div class="badge">Dostawa do Polski</div></header>
+<nav>
+  <div class="logo">Lumivo<span>.</span></div>
+  <a class="nav-link" href="#features">Dlaczego Lumivo?</a>
+</nav>
 
 <main>
-<section class="container hero">
-  <div>
-    <div class="eyebrow">Mini projektor Galaxy 2w1</div>
-    <h1>Zamień swój pokój w galaktykę ✨</h1>
-    <p>Stwórz wyjątkowy klimat w kilka sekund. Kompaktowy projektor sprawdzi się podczas relaksu, wieczornego filmu, imprezy albo jako efektowne światło w sypialni.</p>
-    <div class="price"><strong>129,99 zł</strong><span class="old">159,99 zł</span></div>
-    <a class="cta" href="#zamow">ZAMAWIAM TERAZ →</a>
-    <div class="note">Bez reklam. Płatność i dostawa do skonfigurowania przed uruchomieniem sprzedaży.</div>
-  </div>
-  <div class="product" aria-label="Wizualizacja projektora Galaxy">
-    <div class="stars"></div><div class="orb"></div><div class="device"></div>
-  </div>
+<section class="hero">
+<div>
+  <div class="eyebrow">LUMIVO GALAXY • NOWOŚĆ</div>
+  <h1>Stwórz swój własny <span>galaktyczny klimat.</span></h1>
+  <p class="lead">Kompaktowy projektor LED do tworzenia efektownej atmosfery w domu. Idealny do sypialni, relaksu, filmów i wyjątkowego oświetlenia wnętrza.</p>
+  <div class="price"><strong>129,99 zł</strong><small>jednorazowo</small></div>
+  <a class="buy" href="https://buy.stripe.com/14AcMYdVqbf5a0zbOGfUQ00" target="_blank" rel="noopener">Kup teraz</a>
+  <div class="secure">🔒 Bezpieczna płatność obsługiwana przez Stripe</div>
+</div>
+<div class="product-art" aria-label="Wizualizacja projektora Lumivo Galaxy">
+  <div class="stars"></div>
+  <div class="projector"><div class="lens"></div><div class="status-light"></div></div>
+</div>
 </section>
 
-<section>
-<div class="container center">
-<h2>Mały projektor. Wielki efekt.</h2>
-<p class="muted">Zaprojektowany do tworzenia nastroju bez zajmowania dużo miejsca.</p>
+<section class="features" id="features">
+<h2 class="section-title">Dlaczego Lumivo Galaxy?</h2>
 <div class="grid">
-<div class="card"><div class="icon">🌌</div><h3>Atmosfera w kilka sekund</h3><p class="muted">Dodaj galaktyczny klimat do sypialni, salonu lub pokoju dziecka.</p></div>
-<div class="card"><div class="icon">🎛️</div><h3>Prosta obsługa</h3><p class="muted">Kompaktowa konstrukcja i wygodne sterowanie sprawiają, że łatwo dopasujesz efekt.</p></div>
-<div class="card"><div class="icon">🎁</div><h3>Pomysł na prezent</h3><p class="muted">Efektowny gadżet dla osoby, która lubi nietypowe dodatki do wnętrz.</p></div>
-</div>
+<article class="feature"><div class="icon">🌌</div><h3>Efektowna atmosfera</h3><p>Twórz wyjątkowy klimat i rozświetl swoje wnętrze efektami inspirowanymi galaktyką.</p></article>
+<article class="feature"><div class="icon">🏠</div><h3>Kompaktowy rozmiar</h3><p>Niewielka konstrukcja sprawia, że projektor łatwo ustawić w sypialni, salonie lub pokoju.</p></article>
+<article class="feature"><div class="icon">✨</div><h3>Wiele zastosowań</h3><p>Relaks, wieczorny seans, dekoracja pokoju albo wyjątkowa atmosfera podczas spotkania.</p></article>
 </div>
 </section>
 
-<section class="container">
-<div class="offer"><div><div class="eyebrow">Oferta</div><h2>1 sztuka — 129,99 zł</h2><p class="muted">Cena promocyjna. Koszt dostawy należy ustawić zgodnie z faktyczną ofertą przewoźnika.</p></div><a class="cta" href="#zamow">KUP TERAZ</a></div>
-</section>
-
-<section>
-<div class="container center"><h2>Najczęstsze pytania</h2>
-<div class="faq">
-<details><summary>Gdzie można używać projektora?</summary><p class="muted">W sypialni, salonie, pokoju dziecka lub dowolnym miejscu, w którym chcesz uzyskać dekoracyjne oświetlenie.</p></details>
-<details><summary>Czy projektor jest duży?</summary><p class="muted">Nie — to kompaktowe urządzenie zaprojektowane tak, aby łatwo je ustawić i przechowywać.</p></details>
-<details><summary>Jak długo trwa dostawa?</summary><p class="muted">Termin zależy od wybranej metody dostawy. Przed publikacją sklepu wpisz tutaj rzeczywisty czas wynikający z oferty dostawcy.</p></details>
-<details><summary>Jak wygląda zwrot?</summary><p class="muted">Dla sprzedaży konsumenckiej w UE należy przed uruchomieniem sklepu przygotować prawidłową politykę zwrotów i informacje wymagane prawem.</p></details>
-</div></div>
-</section>
-
-<section id="zamow">
-<div class="container center"><h2>Zamów swój projektor</h2><p class="muted">Wypełnij formularz. To wersja demonstracyjna — przed sprzedażą podłącz obsługę zamówień i płatności.</p>
-<div class="formwrap">
-<form id="order">
-<div class="formgrid">
-<div class="field"><label>Imię i nazwisko</label><input required name="name" placeholder="Jan Kowalski"></div>
-<div class="field"><label>Telefon</label><input required name="phone" placeholder="+48 000 000 000"></div>
-<div class="field full"><label>E-mail</label><input required type="email" name="email" placeholder="jan@example.com"></div>
-<div class="field full"><label>Adres dostawy</label><input required name="address" placeholder="Ulica, numer, kod pocztowy, miasto"></div>
-<div class="field"><label>Ilość</label><select name="qty"><option>1 szt. — 129,99 zł</option><option>2 szt. — 229,99 zł</option></select></div>
-<div class="field"><label>Płatność</label><select name="payment"><option>Płatność do podłączenia</option><option>Przelew</option></select></div>
-</div>
-<br><button class="cta" type="submit">WYŚLIJ ZAMÓWIENIE →</button>
-<div class="success" id="success">Formularz działa lokalnie. Podłącz backend/operatora płatności, aby zamówienia były faktycznie zapisywane i opłacane.</div>
-</form>
-</div></div>
+<section class="offer">
+<h2>Gotowy na własną galaktykę?</h2>
+<p>Zamów Lumivo Galaxy za 129,99 zł i przejdź do bezpiecznej strony płatności.</p>
+<a class="buy" href="https://buy.stripe.com/14AcMYdVqbf5a0zbOGfUQ00" target="_blank" rel="noopener">Kup Lumivo Galaxy — 129,99 zł</a>
 </section>
 </main>
 
-<footer class="footer"><div class="container">© 2026 Galaxy Home · Regulamin · Polityka prywatności · Zwroty i reklamacje</div></footer>
-<script>
-document.getElementById('order').addEventListener('submit',e=>{e.preventDefault();document.getElementById('success').style.display='block';});
-</script>
+<footer>© 2026 Lumivo. Wszystkie prawa zastrzeżone.</footer>
 </body>
 </html>
